@@ -1,6 +1,8 @@
 # Sistema Interbancario
 
-Bienvenido *Alejandro* a tu primer proyecto de programación. Vas a crear un sistema bancario que puede realizar transacciones internas y a otros bancos simulando que están en redes separadas cuando en realidad están separadas a nivel de red por *Contenedores Docker*. Esto va a simular que cada banco está en un servidor diferente 
+## Instrucciones 
+
+Tú primer proyecto de programación. Vas a crear un sistema bancario que puede realizar transacciones internas y a otros bancos simulando que están en redes separadas cuando en realidad están separadas a nivel de red por *Contenedores Docker*. Esto va a simular que cada banco está en un servidor diferente 
 
 ![Docker_Diagram](./docs/docker.png)
 
@@ -82,6 +84,10 @@ Para aprender estos conceptos te recomiendo que uses *Youtube*
 - **Git:** Pull Requests, Ramas, Commits, Comandos Fundamentales...
 
 ## Fases de Desarrollo
+
+### Fase 0: Crear Rama Git
+
+Crea una rama en git antes de empezar a programar cualquier cosa y asegurate de entrar a esa rama 
 
 ### Fase 1: POO pura en `app/domain/`) (Estructura del de Sistema) 
 
