@@ -1,0 +1,36 @@
+services:
+  banco_alfa:
+    build: .
+    container_name: contenedor_banco_alfa
+    ports:
+      - "8001:8000"
+    environment:
+      - BANK_CODE=0101
+      - BANK_NAME=Banco Alfa
+      - DB_PATH=/app/data/banco_alfa.db
+      - PEER_BANK_URL=http://banco_beta:8000
+    volumes:
+      - ./app:/app/app
+      - ./data:/app/data
+    networks:
+      - red_interbancaria
+
+  banco_beta:
+    build: .
+    container_name: contenedor_banco_beta
+    ports:
+      - "8002:8000"
+    environment:
+      - BANK_CODE=0102
+      - BANK_NAME=Banco Beta
+      - DB_PATH=/app/data/banco_beta.db
+      - PEER_BANK_URL=http://banco_alfa:8000
+    volumes:
+      - ./app:/app/app
+      - ./data:/app/data
+    networks:
+      - red_interbancaria
+
+networks:
+  red_interbancaria:
+    driver: bridge
